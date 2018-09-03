@@ -67,7 +67,12 @@ countryName_default                     = US
 basicConstraints                        = CA:TRUE
 subjectKeyIdentifier                    = hash
 authorityKeyIdentifier                  = keyid:always,issuer:always
+keyUsage                                = digitalSignature, keyEncipherment
+subjectAltName                          = @alt_names
  
 [ v3_req ]
 basicConstraints                        = CA:FALSE
 subjectKeyIdentifier                    = hash
+
+[alt_names]
+DNS.1 = localhost
