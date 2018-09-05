@@ -71,3 +71,9 @@ authorityKeyIdentifier                  = keyid:always,issuer:always
 [ v3_req ]
 basicConstraints                        = CA:FALSE
 subjectKeyIdentifier                    = hash
+keyUsage                                = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName                          = @alt_names
+extendedKeyUsage                        = serverAuth
+
+[alt_names]
+DNS.1                                   = Common Name (hostname, IP, or your name)
