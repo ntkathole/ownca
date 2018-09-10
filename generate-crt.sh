@@ -15,5 +15,5 @@ cat <<EOF | openssl req -new -nodes -out ./$CERT_HOST/$CERT_HOST.crt.req\
 $CERT_HOST
 EOF
 
-openssl ca -out ./$CERT_HOST/$CERT_HOST.crt -config ./openssl.cnf -infiles ./$CERT_HOST/$CERT_HOST.crt.req
+openssl ca -out ./$CERT_HOST/$CERT_HOST.crt -config ./openssl.cnf -passin pass:password -infiles ./$CERT_HOST/$CERT_HOST.crt.req
 sed -i '76,77d' ./openssl.cnf
